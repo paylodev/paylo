@@ -13,6 +13,7 @@
     "@libsql/client": "^0.6.2",
     "@logtail/next": "^0.1.5",
     "@mantine/core": "^7.11.0",
+    "@mantine/notifications": "^7.11.0",
     "@prisma/adapter-libsql": "^5.16.1",
     "@prisma/client": "^5.16.1",
     "@types/bcrypt": "^5.0.2",
