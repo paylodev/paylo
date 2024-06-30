@@ -17,6 +17,7 @@
     "@mantine/notifications": "^7.11.0",
     "@prisma/adapter-libsql": "^5.16.1",
     "@prisma/client": "^5.16.1",
+    "@react-email/components": "^0.0.19",
     "@types/bcrypt": "^5.0.2",
     "@types/jsonwebtoken": "^9.0.6",
     "@types/nodemailer": "^6.4.15",
@@ -29,6 +30,7 @@
     "nodemailer": "^6.9.14",
     "react": "^18",
     "react-dom": "^18",
+    "react-email": "^2.1.4",
     "react-hook-form": "^7.52.0"
   },
   "devDependencies": {
