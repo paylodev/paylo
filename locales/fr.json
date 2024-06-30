@@ -27,16 +27,19 @@
         },
         "email": {
           "label": "Adresse e-mail",
-          "placeholder": "jean.dupont@exemple.com"
+          "placeholder": "jean.dupont@exemple.com",
+          "invalid": "Adresse e-mail invalide"
         },
         "password": {
           "label": "Mot de passe",
-          "placeholder": "•••••••••••••••"
+          "placeholder": "•••••••••••••••",
+          "invalid": "Le mot de passe doit contenir au moins 8 caractères, une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial"
         },
         "terms": "J'ai lu et j'accepte les conditions d'utilisation et la politique de confidentialité",
         "submit": "Créer mon compte",
         "haveAccount": "Vous avez déjà un compte ?",
-        "login": "Connectez-vous"
+        "login": "Connectez-vous",
+        "fieldRequired": "Ce champ est obligatoire"
       }
     }
   }
