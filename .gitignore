@@ -38,3 +38,7 @@ next-env.d.ts
 # ide
 /.vscode
 /.idea
+
+# prisma
+/prisma/migrations
+/prisma/dev.db*
