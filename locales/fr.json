@@ -9,10 +9,6 @@
       }
     },
     "auth": {
-      "layout": {
-        "privacy": "Politique de confidentialité",
-        "terms": "Conditions d'utilisation"
-      },
       "register": {
         "layout": {
           "metadata": {
