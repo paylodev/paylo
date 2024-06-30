@@ -28,7 +28,8 @@
         "email": {
           "label": "Adresse e-mail",
           "placeholder": "jean.dupont@exemple.com",
-          "invalid": "Adresse e-mail invalide"
+          "invalid": "Adresse e-mail invalide",
+          "alreadyExists": "Cette adresse e-mail est déjà utilisée par un autre compte"
         },
         "password": {
           "label": "Mot de passe",
@@ -39,7 +40,15 @@
         "submit": "Créer mon compte",
         "haveAccount": "Vous avez déjà un compte ?",
         "login": "Connectez-vous",
-        "fieldRequired": "Ce champ est obligatoire"
+        "fieldRequired": "Ce champ est obligatoire",
+        "rateLimit": {
+          "title": "Trop de tentatives",
+          "message": "Vous avez atteint le nombre maximal de tentatives de création de compte. Veuillez réessayer plus tard."
+        },
+        "serverError": {
+          "title": "Erreur serveur",
+          "message": "Une erreur est survenue lors de la création de votre compte. Veuillez réessayer plus tard."
+        }
       }
     }
   }
