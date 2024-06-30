@@ -46,7 +46,7 @@ export default async function AuthRegisterAction({
 
     const existingUser = await db.user.findFirst({
       where: {
-        email,
+        email: email.toLowerCase(),
       },
     });
 
@@ -58,7 +58,7 @@ export default async function AuthRegisterAction({
       data: {
         firstName,
         lastName,
-        email,
+        email: email.toLowerCase(),
         password: await hash(password, 10),
       },
     });
