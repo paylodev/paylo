@@ -4,13 +4,13 @@ export default function BrandLogo({
   width,
   className,
   styles,
-}: {
+}: Readonly<{
   type: "logo" | "text" | "icon";
   color: string;
   width: number;
   className?: string;
   styles?: React.CSSProperties;
-}) {
+}>) {
   switch (type) {
     case "text":
       return (
