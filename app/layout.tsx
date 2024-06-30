@@ -3,7 +3,9 @@ import "@/styles/globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import "@mantine/core/styles.css";
+import "@mantine/notifications/styles.css";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
+import { Notifications } from "@mantine/notifications";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,6 +37,7 @@ export default async function RootLayout({
               primaryColor: "dark",
             }}
           >
+            <Notifications position={"top-right"} />
             {children}
           </MantineProvider>
         </NextIntlClientProvider>
