@@ -12,13 +12,14 @@ import {
 } from "@mantine/core";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import styles from "@/styles/auth/register/page.module.css";
 
 export default function AuthRegister() {
   const t = useTranslations("client.auth.register");
   return (
     <Stack>
       <Title order={2}>{t("title")}</Title>
-      <Group grow>
+      <Group grow className={styles.Group}>
         <TextInput
           label={t("firstName.label")}
           placeholder={t("firstName.placeholder")}
