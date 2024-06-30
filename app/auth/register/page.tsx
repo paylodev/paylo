@@ -16,16 +16,69 @@ import styles from "@/styles/auth/register/page.module.css";
 import { useForm } from "react-hook-form";
 import { emailRegex, passwordRegex } from "@/lib/common";
 import { ErrorMessage } from "@hookform/error-message";
+import AuthRegisterAction from "@/actions/auth/register";
+import { notifications } from "@mantine/notifications";
 
 export default function AuthRegister() {
   const t = useTranslations("client.auth.register");
   const {
     register,
     handleSubmit,
+    setError,
     formState: { errors, isSubmitting },
   } = useForm();
   return (
-    <form onSubmit={handleSubmit((data) => console.log(data))}>
+    <form
+      onSubmit={handleSubmit(async (data) => {
+        const res = await AuthRegisterAction(
+          data as {
+            firstName: string;
+            lastName: string;
+            email: string;
+            password: string;
+            terms: boolean;
+          }
+        );
+        switch (res.message) {
+          case "ERR_MISSING_FIELDS":
+            for (const field of res.data.fields as string[]) {
+              setError(field, { message: t("fieldRequired") });
+            }
+            break;
+
+          case "ERR_INVALID_EMAIL":
+            setError("email", { message: t("email.invalid") });
+            break;
+
+          case "ERR_INVALID_PASSWORD":
+            setError("password", { message: t("password.invalid") });
+            break;
+
+          case "ERR_EMAIL_EXISTS":
+            setError("email", { message: t("email.alreadyExists") });
+            break;
+
+          case "ERR_RATE_LIMIT":
+            notifications.show({
+              title: t("rateLimit.title"),
+              message: t("rateLimit.message"),
+              color: "red",
+            });
+            break;
+
+          case "ERR_INTERNAL_SERVER":
+            notifications.show({
+              title: t("serverError.title"),
+              message: t("serverError.message"),
+              color: "red",
+            });
+            break;
+
+          case "OK":
+          // TODO: Handle successful registration (redirect to email verification)
+        }
+      })}
+    >
       <Stack>
         <Title order={2}>{t("title")}</Title>
         <Group grow className={styles.Group}>
@@ -82,7 +135,9 @@ export default function AuthRegister() {
           {...register("terms", { required: t("fieldRequired") })}
           error={errors.terms && <ErrorMessage errors={errors} name="terms" />}
         />
-        <Button type={"submit"}>{t("submit")}</Button>
+        <Button type={"submit"} loading={isSubmitting}>
+          {t("submit")}
+        </Button>
         <Text ta={"center"}>
           {t("haveAccount")} <Link href={"/auth/login"}>{t("login")}</Link>
         </Text>
