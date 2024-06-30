@@ -2,6 +2,8 @@ import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
+import "@mantine/core/styles.css";
+import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,9 +24,19 @@ export default async function RootLayout({
   const locales = await getMessages();
   return (
     <html lang={lang}>
+      <head>
+        <ColorSchemeScript />
+      </head>
       <body className={inter.className}>
         <NextIntlClientProvider messages={locales}>
-          {children}
+          <MantineProvider
+            theme={{
+              defaultRadius: "md",
+              primaryColor: "dark",
+            }}
+          >
+            {children}
+          </MantineProvider>
         </NextIntlClientProvider>
       </body>
     </html>
