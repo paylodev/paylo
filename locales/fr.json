@@ -49,6 +49,18 @@
           "title": "Erreur serveur",
           "message": "Une erreur est survenue lors de la création de votre compte. Veuillez réessayer plus tard."
         }
+      },
+      "verify": {
+        "layout": {
+          "metadata": {
+            "title": "Paylo | Vérifiez votre adresse e-mail",
+            "description": "Gérez facilement les factures de votre garderie avec Paylo, la solution de facturation dédiée aux établissements scolaires"
+          }
+        },
+        "title": "Vérifiez votre adresse e-mail",
+        "description": "Vérifiez le boîte de réception de {email} et entrez le code de vérification pour activer votre compte",
+        "resend": "Renvoyer le code de vérification",
+        "logout": "Se déconnecter"
       }
     }
   }
