@@ -18,6 +18,7 @@ import { emailRegex, passwordRegex } from "@/lib/common";
 import { ErrorMessage } from "@hookform/error-message";
 import AuthRegisterAction from "@/actions/auth/register";
 import { notifications } from "@mantine/notifications";
+import { useRouter } from "next/navigation";
 
 export default function AuthRegister() {
   const t = useTranslations("client.auth.register");
@@ -27,6 +28,7 @@ export default function AuthRegister() {
     setError,
     formState: { errors, isSubmitting },
   } = useForm();
+  const router = useRouter();
   return (
     <form
       onSubmit={handleSubmit(async (data) => {
@@ -75,7 +77,7 @@ export default function AuthRegister() {
             break;
 
           case "OK":
-          // TODO: Handle successful registration (redirect to email verification)
+            router.push("/auth/verify");
         }
       })}
     >
