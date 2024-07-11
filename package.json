@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/error-message": "^2.0.1",
     "@mantine/core": "^7.11.1",
     "next": "14.2.5",
     "next-intl": "^3.16.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-hook-form": "^7.52.1"
   },
   "devDependencies": {
     "@types/node": "^20",
