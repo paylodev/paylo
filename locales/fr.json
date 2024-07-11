@@ -31,16 +31,19 @@
         },
         "email": {
           "label": "Adresse e-mail",
-          "placeholder": "bruno.cordier@exemple.com"
+          "placeholder": "bruno.cordier@exemple.com",
+          "invalid": "Adresse e-mail invalide"
         },
         "password": {
           "label": "Mot de passe",
-          "placeholder": "••••••••••••••••"
+          "placeholder": "••••••••••••••••",
+          "invalid": "Le mot de passe doit contenir au moins 8 caractères, une majuscule, une minuscule, un chiffre et un caractère spécial"
         },
         "terms": "J'accepte les conditions générales d'utilisation et la politique de confidentialité",
         "submit": "Créer un compte",
         "alreadyHaveAccount": "Vous avez déjà un compte ?",
-        "login": "Connectez-vous"
+        "login": "Connectez-vous",
+        "requiredField": "Ce champ est obligatoire"
       }
     }
   }
