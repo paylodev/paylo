@@ -1,0 +1,12 @@
+{
+  "client": {
+    "root": {
+      "layout": {
+        "metadata": {
+          "title": "Paylo | Solution de facturation pour les garderies scolaires",
+          "description": "Gérez facilement les factures de votre garderie avec Paylo, la solution de facturation dédiée aux établissements scolaires"
+        }
+      }
+    }
+  }
+}
