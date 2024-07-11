@@ -7,6 +7,41 @@
           "description": "Gérez facilement les factures de votre garderie avec Paylo, la solution de facturation dédiée aux établissements scolaires"
         }
       }
+    },
+    "auth": {
+      "layout": {
+        "terms": "Conditions générales d'utilisation",
+        "privacy": "Politique de confidentialité"
+      },
+      "register": {
+        "layout": {
+          "metadata": {
+            "title": "Paylo | Créez votre compte Paylo",
+            "description": "Gérez facilement les factures de votre garderie avec Paylo, la solution de facturation dédiée aux établissements scolaires"
+          }
+        },
+        "title": "Créez votre compte Paylo",
+        "firstName": {
+          "label": "Prénom",
+          "placeholder": "Bruno"
+        },
+        "lastName": {
+          "label": "Nom",
+          "placeholder": "Cordier"
+        },
+        "email": {
+          "label": "Adresse e-mail",
+          "placeholder": "bruno.cordier@exemple.com"
+        },
+        "password": {
+          "label": "Mot de passe",
+          "placeholder": "••••••••••••••••"
+        },
+        "terms": "J'accepte les conditions générales d'utilisation et la politique de confidentialité",
+        "submit": "Créer un compte",
+        "alreadyHaveAccount": "Vous avez déjà un compte ?",
+        "login": "Connectez-vous"
+      }
     }
   }
 }
