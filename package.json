@@ -11,7 +11,10 @@
   },
   "dependencies": {
     "@hookform/error-message": "^2.0.1",
+    "@libsql/client": "^0.7.0",
     "@mantine/core": "^7.11.1",
+    "@prisma/adapter-libsql": "^5.16.2",
+    "@prisma/client": "^5.16.2",
     "next": "14.2.5",
     "next-intl": "^3.16.0",
     "react": "^18",
