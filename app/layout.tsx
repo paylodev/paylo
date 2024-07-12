@@ -2,8 +2,10 @@ import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
-import "@mantine/core/styles.css";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
+import { Notifications } from "@mantine/notifications";
+import "@mantine/core/styles.css";
+import "@mantine/notifications/styles.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,6 +35,7 @@ export default async function RootLayout({
           <MantineProvider
             theme={{ primaryColor: "dark", defaultRadius: "md" }}
           >
+            <Notifications autoClose={5000} position={"top-right"} />
             {children}
           </MantineProvider>
         </NextIntlClientProvider>
