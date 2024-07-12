@@ -10,4 +10,12 @@ function createErrorResponse(
   };
 }
 
-export { createErrorResponse };
+function createSuccessResponse(data: { [key: string]: any } = {}) {
+  return {
+    statusCode: 200,
+    message: "OK",
+    data,
+  };
+}
+
+export { createErrorResponse, createSuccessResponse };
