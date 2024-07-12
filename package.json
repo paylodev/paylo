@@ -27,6 +27,7 @@
     "postcss": "^8.4.39",
     "postcss-preset-mantine": "^1.15.0",
     "postcss-simple-vars": "^7.0.1",
+    "prisma": "^5.16.2",
     "typescript": "^5"
   }
 }
